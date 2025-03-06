@@ -108,7 +108,7 @@ fn launch() {
     let mut kvi = kvm_vcpu_init::default();
     vm_fd.get_preferred_target(&mut kvi).unwrap();
 
-    kvi.features[0] |= 1u32 << KVM_ARM_VCPU_PSCI_0_2;
+    kvi.features[0] |= 1u32 << KVM_ARM_VCPU_PSCI_0_2 | 1u32 << kvm_bindings::KVM_ARM_VCPU_REC;
 
     vcpu_fd.vcpu_init(&kvi).unwrap();
 
