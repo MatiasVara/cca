@@ -8,7 +8,7 @@ pub enum Error {
     GICCreate(IoError),
     GICInit(IoError),
     Config(IoError),
-    RDCreate(IoError),
+    RealmCreate(IoError),
     RPopulate(IoError),
     RInitiate(IoError),
     RActivate(IoError),

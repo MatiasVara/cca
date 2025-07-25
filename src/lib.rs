@@ -63,8 +63,8 @@ impl Realm {
             ..Default::default()
         };
 
-        rme_config.args[0] = KVM_CAP_ARM_RME_CREATE_RD;
-        vmfd.enable_cap(&rme_config).map_err(Error::RDCreate)?;
+        rme_config.args[0] = KVM_CAP_ARM_RME_CREATE_REALM;
+        vmfd.enable_cap(&rme_config).map_err(Error::RealmCreate)?;
 
         Ok(())
     }
